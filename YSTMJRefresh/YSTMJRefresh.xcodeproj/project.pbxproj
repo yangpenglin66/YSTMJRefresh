@@ -13,6 +13,7 @@
 		2AAC53C021706CE3005C0A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC53BF21706CE3005C0A5B /* Assets.xcassets */; };
 		2AAC53C321706CE3005C0A5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC53C121706CE3005C0A5B /* LaunchScreen.storyboard */; };
 		2AAC53C621706CE3005C0A5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC53C521706CE3005C0A5B /* main.m */; };
+		2AAC53CE21706E8E005C0A5B /* YSRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC53CD21706E8D005C0A5B /* YSRefreshGifHeader.m */; };
 		6E70FED2C8205826D0554760 /* libPods-YSTMJRefresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA1C68985F7A05ADEBD4AC4 /* libPods-YSTMJRefresh.a */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,8 @@
 		2AAC53C221706CE3005C0A5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AAC53C421706CE3005C0A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AAC53C521706CE3005C0A5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2AAC53CC21706E8D005C0A5B /* YSRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSRefreshGifHeader.h; sourceTree = "<group>"; };
+		2AAC53CD21706E8D005C0A5B /* YSRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSRefreshGifHeader.m; sourceTree = "<group>"; };
 		37D0E6CBD7C2B020569101A8 /* Pods-YSTMJRefresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSTMJRefresh.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSTMJRefresh/Pods-YSTMJRefresh.release.xcconfig"; sourceTree = "<group>"; };
 		7DA1C68985F7A05ADEBD4AC4 /* libPods-YSTMJRefresh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YSTMJRefresh.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD9D61FB4E3858BFE4B5450E /* Pods-YSTMJRefresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSTMJRefresh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSTMJRefresh/Pods-YSTMJRefresh.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 				2AAC53B721706CE3005C0A5B /* AppDelegate.m */,
 				2AAC53B921706CE3005C0A5B /* ViewController.h */,
 				2AAC53BA21706CE3005C0A5B /* ViewController.m */,
+				2AAC53CC21706E8D005C0A5B /* YSRefreshGifHeader.h */,
+				2AAC53CD21706E8D005C0A5B /* YSRefreshGifHeader.m */,
 				2AAC53BC21706CE3005C0A5B /* Main.storyboard */,
 				2AAC53BF21706CE3005C0A5B /* Assets.xcassets */,
 				2AAC53C121706CE3005C0A5B /* LaunchScreen.storyboard */,
@@ -207,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AAC53BB21706CE3005C0A5B /* ViewController.m in Sources */,
+				2AAC53CE21706E8E005C0A5B /* YSRefreshGifHeader.m in Sources */,
 				2AAC53C621706CE3005C0A5B /* main.m in Sources */,
 				2AAC53B821706CE3005C0A5B /* AppDelegate.m in Sources */,
 			);
@@ -354,7 +360,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDTNJJH4S7;
 				INFOPLIST_FILE = YSTMJRefresh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.YSTMJRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -369,7 +378,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDTNJJH4S7;
 				INFOPLIST_FILE = YSTMJRefresh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.YSTMJRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
