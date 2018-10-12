@@ -13,6 +13,7 @@
 		2AAC53C021706CE3005C0A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC53BF21706CE3005C0A5B /* Assets.xcassets */; };
 		2AAC53C321706CE3005C0A5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC53C121706CE3005C0A5B /* LaunchScreen.storyboard */; };
 		2AAC53C621706CE3005C0A5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC53C521706CE3005C0A5B /* main.m */; };
+		6E70FED2C8205826D0554760 /* libPods-YSTMJRefresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA1C68985F7A05ADEBD4AC4 /* libPods-YSTMJRefresh.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		2AAC53C221706CE3005C0A5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AAC53C421706CE3005C0A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AAC53C521706CE3005C0A5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37D0E6CBD7C2B020569101A8 /* Pods-YSTMJRefresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSTMJRefresh.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSTMJRefresh/Pods-YSTMJRefresh.release.xcconfig"; sourceTree = "<group>"; };
+		7DA1C68985F7A05ADEBD4AC4 /* libPods-YSTMJRefresh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YSTMJRefresh.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD9D61FB4E3858BFE4B5450E /* Pods-YSTMJRefresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSTMJRefresh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSTMJRefresh/Pods-YSTMJRefresh.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E70FED2C8205826D0554760 /* libPods-YSTMJRefresh.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				2AAC53B521706CE3005C0A5B /* YSTMJRefresh */,
 				2AAC53B421706CE3005C0A5B /* Products */,
+				322C51837FE8A03BCA70CE69 /* Pods */,
+				A6A0824D640A46EBE4DBBCDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +78,23 @@
 			path = YSTMJRefresh;
 			sourceTree = "<group>";
 		};
+		322C51837FE8A03BCA70CE69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD9D61FB4E3858BFE4B5450E /* Pods-YSTMJRefresh.debug.xcconfig */,
+				37D0E6CBD7C2B020569101A8 /* Pods-YSTMJRefresh.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A6A0824D640A46EBE4DBBCDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DA1C68985F7A05ADEBD4AC4 /* libPods-YSTMJRefresh.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AAC53C921706CE3005C0A5B /* Build configuration list for PBXNativeTarget "YSTMJRefresh" */;
 			buildPhases = (
+				24AAD6711FC3F2463297498E /* [CP] Check Pods Manifest.lock */,
 				2AAC53AF21706CE3005C0A5B /* Sources */,
 				2AAC53B021706CE3005C0A5B /* Frameworks */,
 				2AAC53B121706CE3005C0A5B /* Resources */,
+				DA5928DBB1543D6E028B44F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +161,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24AAD6711FC3F2463297498E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YSTMJRefresh-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA5928DBB1543D6E028B44F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YSTMJRefresh/Pods-YSTMJRefresh-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YSTMJRefresh/Pods-YSTMJRefresh-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2AAC53AF21706CE3005C0A5B /* Sources */ = {
@@ -283,15 +348,13 @@
 		};
 		2AAC53CA21706CE3005C0A5B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD9D61FB4E3858BFE4B5450E /* Pods-YSTMJRefresh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDTNJJH4S7;
 				INFOPLIST_FILE = YSTMJRefresh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YSTMJRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,15 +363,13 @@
 		};
 		2AAC53CB21706CE3005C0A5B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37D0E6CBD7C2B020569101A8 /* Pods-YSTMJRefresh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDTNJJH4S7;
 				INFOPLIST_FILE = YSTMJRefresh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YSTMJRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
